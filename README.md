@@ -42,10 +42,10 @@
 Requires React 19+ and Node.js 18+.
 
 ```shell
-$ yarn add react-timepicker
+$ yarn add @axelixlabs/react-timepicker
 
 # or via npm
-$ npm install --save react-timepicker
+$ npm install --save @axelixlabs/react-timepicker
 ```
 
 If you need the original package for older React versions, use [catc/react-timekeeper](https://github.com/catc/react-timekeeper) instead.
@@ -54,7 +54,7 @@ If you need the original package for older React versions, use [catc/react-timek
 
 ```javascript
 import React, {useState} from 'react';
-import TimeKeeper from 'react-timepicker';
+import TimeKeeper from '@axelixlabs/react-timepicker';
 
 function YourComponent(){
   const [time, setTime] = useState('12:34pm')

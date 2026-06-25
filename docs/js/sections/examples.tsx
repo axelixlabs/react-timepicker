@@ -35,7 +35,7 @@ export default function Examples() {
 				</div>
 
 				<Code type={SYNTAX.js}>{`import React from 'react';
-import TimeKeeper from 'react-timekeeper';
+import TimeKeeper from '@axelixlabs/react-timepicker';
 
 function YourComponent(){
 	const [time, setTime] = useState('12:34pm')
@@ -84,7 +84,7 @@ function YourComponent(){
 				</div>
 
 				<Code type={SYNTAX.js}>{`import React from 'react';
-import TimeKeeper from 'react-timekeeper';
+import TimeKeeper from '@axelixlabs/react-timepicker';
 
 function YourComponent(){
 	const [time, setTime] = useState('12:34pm')
@@ -128,7 +128,7 @@ function YourComponent(){
 				</div>
 
 				<Code type={SYNTAX.js}>{`import React from 'react';
-import TimeKeeper from 'react-timekeeper';
+import TimeKeeper from '@axelixlabs/react-timepicker';
 
 function YourComponent(){
 	const [time, setTime] = useState('12:34pm')
@@ -173,7 +173,7 @@ function YourComponent(){
 				</div>
 
 				<Code type={SYNTAX.js}>{`import React from 'react';
-import TimeKeeper from 'react-timekeeper';
+import TimeKeeper from '@axelixlabs/react-timepicker';
 
 function YourComponent(){
 	const [time, setTime] = useState('12:34pm')
@@ -219,7 +219,7 @@ function YourComponent(){
 				</div>
 
 				<Code type={SYNTAX.js}>{`import React from 'react';
-import TimeKeeper from 'react-timekeeper';
+import TimeKeeper from '@axelixlabs/react-timepicker';
 
 function YourComponent(){
 	const [time, setTime] = useState('12:34pm')

@@ -1,5 +1,5 @@
 {
-  "name": "react-timepicker",
+  "name": "@axelixlabs/react-timepicker",
   "version": "3.0.0",
   "description": "API-compatible fork of react-timekeeper for newer React versions",
   "main": "./lib/index.js",
