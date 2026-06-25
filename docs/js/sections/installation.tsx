@@ -1,26 +1,27 @@
 import Link from '../components/link'
 import Text from '../components/text'
 import Code, { SYNTAX } from '../components/code'
+import ForkNotice from '../components/fork-notice'
+import { ORIGINAL_REPO, PACKAGE_NAME } from '../constants'
 
 export default function Intro() {
 	return (
 		<section className="installation docs-section" id="docs">
 			<h2>Installation and Usage</h2>
 
-			<Text>
-				Install <Code inline>react-timekeeper</Code> via npm.
-			</Text>
-			<Code>npm install --save react-timekeeper</Code>
+			<ForkNotice />
 
 			<Text>
-				The latest version of timekeeper (v2+) requires{' '}
-				<Link href="https://reactjs.org/blog/2019/02/06/react-v16.8.0.html">
-					react hooks (v16.8)
-				</Link>
-				. If you&apos;re using an older version of react, install timekeeper v1
-				via:
+				Install <Code inline>{PACKAGE_NAME}</Code> via npm. This fork requires{' '}
+				<Link href="https://react.dev/">React 19</Link> or newer.
 			</Text>
-			<Code>npm install --save react-timekeeper@^1.0.0</Code>
+			<Code>npm install --save {PACKAGE_NAME}</Code>
+
+			<Text>
+				The package keeps the same API as the original{' '}
+				<Link href={ORIGINAL_REPO}>react-timekeeper</Link>. If you need support
+				for older React versions, use the original project instead.
+			</Text>
 
 			<Text>
 				Usage is simple: just import the library javascript and use it in the
@@ -31,7 +32,7 @@ export default function Intro() {
 
 			<Code type={SYNTAX.js}>
 				{`import React from 'react';
-import TimeKeeper from 'react-timekeeper';
+import TimeKeeper from '${PACKAGE_NAME}';
 
 function MyComponent {
 	return (

@@ -7,13 +7,10 @@
 </h1>
 
 <p align="center">
-  <a href="https://github.com/catc/react-timekeeper/actions/workflows/ci.yml?query=branch%3Amaster">
-    <img src="https://github.com/catc/react-timekeeper/actions/workflows/ci.yml/badge.svg?branch=master" alt="build" />
+  <a href="https://github.com/axelixlabs/react-timepicker/actions/workflows/ci.yml?query=branch%3Amaster">
+    <img src="https://github.com/axelixlabs/react-timepicker/actions/workflows/ci.yml/badge.svg?branch=master" alt="build" />
   </a>
-  <a href="https://www.npmjs.com/package/react-timekeeper">
-    <img src="https://img.shields.io/npm/dm/react-timekeeper" alt="downloads" />
-  </a>
-  <a href="https://github.com/catc/react-timekeeper/blob/master/LICENSE">
+  <a href="https://github.com/axelixlabs/react-timepicker/blob/master/LICENSE">
     <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="license"/>
   </a>
 </p>
@@ -31,6 +28,8 @@
 ------------
 
 **Features**
+- API-compatible with the original [react-timekeeper](https://github.com/catc/react-timekeeper)
+- supports React 19+
 - supports both 12 hour and 24 hour mode, and flexible time formats
 - simple to use with many customizable options
 - smooth, beautiful animations with [react spring](https://www.react-spring.io)
@@ -39,6 +38,8 @@
 
 ## Installation
 
+Requires React 19+.
+
 ```shell
 $ yarn add react-timekeeper
 
@@ -46,10 +47,7 @@ $ yarn add react-timekeeper
 $ npm install --save react-timekeeper
 ```
 
-Version 2+ of timekeeper requires [react hooks (v16.8)](https://reactjs.org/blog/2019/02/06/react-v16.8.0.html). If you're using an older version of react, install timekeeper v1 via
-```shell
-$ npm install --save react-timekeeper@^1.0.0
-```
+If you need the original package for older React versions, use [catc/react-timekeeper](https://github.com/catc/react-timekeeper) instead.
 
 ## Usage
 
@@ -75,17 +73,16 @@ function YourComponent(){
 All styles are inlined via [emotion](https://github.com/emotion-js/emotion) so no css imports are required.
 
 ## API
-For full api and examples, see [API docs](https://catc.github.io/react-timekeeper/#api) and [examples](https://catc.github.io/react-timekeeper/#examples)
+For full api and examples, see [API docs](https://axelixlabs.github.io/react-timepicker/#api) and [examples](https://axelixlabs.github.io/react-timepicker/#examples)
 
 
 
 ## Development
 1. Clone the repo
-3. `nvm use v12.16.0` (or anything >12+)
-2. `yarn install`
-    - may also need to install react since it's a peer dev: `yarn add -P react react-dom`
-3. `npm run docs:dev`
-4. Navigate to `localhost:3002`
+2. Use Node.js 18 or newer
+3. `npm install`
+4. `npm run docs:dev`
+5. Navigate to `localhost:3002`
 
 ### Contributing
 Before submitting a PR, ensure that:
@@ -103,4 +100,3 @@ Other useful commands:
   - bump version: `npm version NEW_VERSION`, commit and push - CI should publish to npm automatically
 - new github releases
   - manual (TODO - add github action)
-

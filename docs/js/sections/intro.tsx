@@ -3,6 +3,8 @@ import Timekeeper, { TimeOutput } from '@tk'
 
 import { Github, Plug } from '../components/icons'
 import Link from '../components/link'
+import ForkNotice from '../components/fork-notice'
+import { FORK_REPO, ORIGINAL_REPO } from '../constants'
 
 export default function Intro() {
 	const [isVisible, setVisibility] = useState(true)
@@ -23,6 +25,7 @@ export default function Intro() {
 
 	return (
 		<section className="intro-demo">
+			<ForkNotice />
 			<h1>React Timekeeper</h1>
 			<p className="intro-description">
 				Time picker based on the style of the{' '}
@@ -32,8 +35,11 @@ export default function Intro() {
 				app
 			</p>
 			<div className="action-buttons">
-				<Link href="https://github.com/catc/react-timekeeper" samePage>
+				<Link href={FORK_REPO}>
 					<Github /> Source
+				</Link>
+				<Link href={ORIGINAL_REPO}>
+					<Github /> Original
 				</Link>
 				<Link href="#examples" samePage>
 					<Plug /> Examples

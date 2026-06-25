@@ -1,14 +1,14 @@
 {
-  "name": "react-timekeeper",
-  "version": "2.2.1",
-  "description": "Time picker based on the style of the Google Keep app",
+  "name": "react-timepicker",
+  "version": "3.0.0",
+  "description": "API-compatible fork of react-timekeeper for newer React versions",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/catc/react-timekeeper.git"
+    "url": "git+https://github.com/axelixlabs/react-timepicker.git"
   },
-  "homepage": "https://catc.github.io/react-timekeeper/",
+  "homepage": "https://axelixlabs.github.io/react-timepicker/",
   "keywords": [
     "react",
     "time",

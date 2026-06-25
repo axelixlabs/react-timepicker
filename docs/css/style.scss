@@ -43,6 +43,23 @@ pre code {
 // ---------- sections ----------
 
 // intro demo
+.fork-notice {
+	max-width: 720px;
+	margin: 0 auto 1.5em;
+	padding: 1em 1.2em;
+	text-align: center;
+	font-size: 1.4rem;
+	line-height: 1.5;
+	color: #5a5a5a;
+	background: #fff;
+	border: 1px solid #e0e0e0;
+	border-radius: 4px;
+
+	a {
+		border-bottom: 1px solid #8c8c8c;
+	}
+}
+
 .intro-demo {
 	min-height: 100vh;
 	padding: 38px 1em;
@@ -99,7 +116,7 @@ pre code {
 			margin-right: 5px;
 			vertical-align: -4px;
 		}
-		&:first-child {
+		&:not(:last-child) {
 			margin-right: 14px;
 		}
 		&:hover {
