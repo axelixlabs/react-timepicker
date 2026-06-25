@@ -1,5 +1,6 @@
 import { useState, useCallback } from 'react'
-import Timekeeper, { TimeOutput } from '@tk'
+import Timekeeper from '@tk'
+import type { TimeOutput } from '@tk'
 
 import { Github, Plug } from '../components/icons'
 import Link from '../components/link'

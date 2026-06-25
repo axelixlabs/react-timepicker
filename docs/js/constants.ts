@@ -1,4 +1,6 @@
 export const FORK_REPO = 'https://github.com/axelixlabs/react-timepicker'
 export const ORIGINAL_REPO = 'https://github.com/catc/react-timekeeper'
 export const FORK_HOMEPAGE = 'https://axelixlabs.github.io/react-timepicker'
-export const PACKAGE_NAME = 'react-timekeeper'
+export const PACKAGE_NAME = 'react-timepicker'
+export const MIN_NODE_VERSION = '18'
+export const TESTED_NODE_VERSION = '24'

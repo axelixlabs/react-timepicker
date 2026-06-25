@@ -1,21 +1,29 @@
 const config = require('./webpack.config.js')
 const webpack = require('webpack')
-const devServer = require('webpack-dev-server')
+const WebpackDevServer = require('webpack-dev-server')
 
 const PORT = 3002
 
-// update config
 config.mode = 'development'
 config.devtool = 'source-map'
-config.plugins.push(new webpack.HotModuleReplacementPlugin())
 
-new devServer(webpack(config), {
-	publicPath: '/build/',
-	contentBase: './docs',
-	hot: true,
-	stats: 'errors-warnings',
-}).listen(PORT, '0.0.0.0', (err) => {
-	if (err) {
-		console.error('ERROR :: ', err)
-	}
+const compiler = webpack(config)
+const server = new WebpackDevServer(
+	{
+		static: {
+			directory: './docs',
+		},
+		devMiddleware: {
+			publicPath: '/build/',
+		},
+		hot: true,
+		port: PORT,
+		host: '0.0.0.0',
+	},
+	compiler,
+)
+
+server.start().catch(err => {
+	console.error('ERROR :: ', err)
+	process.exit(1)
 })

@@ -1,6 +1,7 @@
-@import 'common/variables.scss';
-@import 'common/normalize.scss';
-@import 'common/global.scss';
+@use 'sass:color';
+@use 'common/variables' as *;
+@use 'common/normalize';
+@use 'common/global';
 
 
 body {
@@ -156,7 +157,7 @@ pre code {
 		margin-top: 4px;
 		transition: 0.15s ease;
 		&:hover {
-			color: darken($blue1, 5%);
+			color: color.adjust($blue1, $lightness: -5%);
 		}
 	}
 	&__hint {

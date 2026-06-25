@@ -1,3 +1,5 @@
+@use 'sass:list';
+
 $font-main: 'Roboto', sans-serif;
 $font-alt: 'Roboto Condensed', sans-serif;
 $font-monospace: 'Roboto Mono', monospace;
@@ -31,12 +33,12 @@ $blue3: #2196f3;
 
 @mixin mq($type, $sizes...){
 	@if $type == min {
-		@media only screen and (min-width : nth($sizes, 1)) { @content; }
+		@media only screen and (min-width : list.nth($sizes, 1)) { @content; }
 	}
 	@else if $type == max {
-		@media only screen and (max-width : nth($sizes, 1)) { @content; }
+		@media only screen and (max-width : list.nth($sizes, 1)) { @content; }
 	}
 	@else if $type == between {
-		@media only screen and (min-width : nth($sizes, 1)) and (max-width : nth($sizes, 2)) { @content; }
+		@media only screen and (min-width : list.nth($sizes, 1)) and (max-width : list.nth($sizes, 2)) { @content; }
 	}
 }

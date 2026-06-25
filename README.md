@@ -30,6 +30,7 @@
 **Features**
 - API-compatible with the original [react-timekeeper](https://github.com/catc/react-timekeeper)
 - supports React 19+
+- supports Node.js 18+ (developed and tested on Node.js 24)
 - supports both 12 hour and 24 hour mode, and flexible time formats
 - simple to use with many customizable options
 - smooth, beautiful animations with [react spring](https://www.react-spring.io)
@@ -38,13 +39,13 @@
 
 ## Installation
 
-Requires React 19+.
+Requires React 19+ and Node.js 18+.
 
 ```shell
-$ yarn add react-timekeeper
+$ yarn add react-timepicker
 
 # or via npm
-$ npm install --save react-timekeeper
+$ npm install --save react-timepicker
 ```
 
 If you need the original package for older React versions, use [catc/react-timekeeper](https://github.com/catc/react-timekeeper) instead.
@@ -53,7 +54,7 @@ If you need the original package for older React versions, use [catc/react-timek
 
 ```javascript
 import React, {useState} from 'react';
-import TimeKeeper from 'react-timekeeper';
+import TimeKeeper from 'react-timepicker';
 
 function YourComponent(){
   const [time, setTime] = useState('12:34pm')
@@ -78,11 +79,13 @@ For full api and examples, see [API docs](https://axelixlabs.github.io/react-tim
 
 
 ## Development
+
+Requires Node.js 18 or newer. This project is developed and tested on Node.js 24.
+
 1. Clone the repo
-2. Use Node.js 18 or newer
-3. `npm install`
-4. `npm run docs:dev`
-5. Navigate to `localhost:3002`
+2. `npm install`
+3. `npm run docs:dev`
+4. Navigate to `localhost:3002`
 
 ### Contributing
 Before submitting a PR, ensure that:

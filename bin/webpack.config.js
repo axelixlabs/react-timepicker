@@ -30,16 +30,16 @@ const config = {
 				},
 			},
 			{
-				// overwritten in build script with extract-text-plugin
 				test: /\.(s?)css$/,
-				loaders: [
+				use: [
 					'style-loader',
 					'css-loader',
 					{
 						loader: 'postcss-loader',
 						options: {
-							ident: 'postcss',
-							plugins: [require('autoprefixer')()],
+							postcssOptions: {
+								plugins: [require('autoprefixer')()],
+							},
 						},
 					},
 					'sass-loader',
