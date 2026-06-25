@@ -1,3 +1,4 @@
+> **Fork notice:** This is a fork of the original [react-timekeeper](https://github.com/catc/react-timekeeper) project. The goal of this fork is to provide an API-compatible drop-in for newer versions of React.
 
 <h1 align="center">
 	<img height="350" src="./screenshots/example.png" />
