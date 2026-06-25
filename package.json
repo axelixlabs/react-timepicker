@@ -19,7 +19,17 @@
     "minute",
     "react spring"
   ],
-  "author": "Catalin Covic <catalin.covic@gmail.com>",
+  "contributors": [
+    {
+      "name": "Catalin Covic",
+      "email": "catalin.covic@gmail.com",
+      "url": "https://github.com/catc"
+    },
+    {
+      "name": "Axelix Labs",
+      "url": "https://github.com/axelixlabs"
+    }
+  ],
   "license": "MIT",
   "scripts": {
     "install-all": "npm install",
