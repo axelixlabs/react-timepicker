@@ -2,7 +2,12 @@ import Link from '../components/link'
 import Text from '../components/text'
 import Code, { SYNTAX } from '../components/code'
 import ForkNotice from '../components/fork-notice'
-import { ORIGINAL_REPO, PACKAGE_NAME, MIN_NODE_VERSION, TESTED_NODE_VERSION } from '../constants'
+import {
+	ORIGINAL_REPO,
+	PACKAGE_NAME,
+	MIN_NODE_VERSION,
+	TESTED_NODE_VERSION,
+} from '../constants'
 
 export default function Intro() {
 	return (
@@ -12,8 +17,8 @@ export default function Intro() {
 			<ForkNotice />
 
 			<Text>
-				<strong>Requirements:</strong> React 19+, Node.js {MIN_NODE_VERSION}+ (tested
-				on Node.js {TESTED_NODE_VERSION}).
+				<strong>Requirements:</strong> React 19+, Node.js {MIN_NODE_VERSION}+
+				(tested on Node.js {TESTED_NODE_VERSION}).
 			</Text>
 
 			<Text>
