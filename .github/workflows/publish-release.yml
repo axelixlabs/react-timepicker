@@ -11,9 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
+          registry-url: 'https://registry.npmjs.org'
 
       - name: check if package.json version has been updated
         uses: EndBug/version-check@v1
@@ -22,14 +24,12 @@ jobs:
 
       - name: build library
         if: steps.check.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
-        env:
-          NPM_ACCESS_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
         run: |
           npm run install-all
           npm run lib
-          touch .npmrc
-          echo "//registry.npmjs.org/:_authToken=${NPM_ACCESS_TOKEN}" >> ./.npmrc
 
       - name: publish to npm
         if: steps.check.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
-        run: npm publish
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_REGISTRY_ACCESS_TOKEN }}
