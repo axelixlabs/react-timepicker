@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { animated, useSpring } from 'react-spring'
+import { animated, useSpring } from '@react-spring/web'
 
 import { Time } from '../helpers/types'
 import { getTimeValue, isSameTime } from '../helpers/utils'

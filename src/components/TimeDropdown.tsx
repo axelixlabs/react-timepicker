@@ -123,7 +123,11 @@ export default function TimeDropdown({ close }: Props) {
 					const isSelected = selected === value
 					return (
 						<li
-							ref={el => (isSelected ? (selectedOption.current = el) : '')}
+							ref={el => {
+								if (isSelected) {
+									selectedOption.current = el
+								}
+							}}
 							className={`react-timekeeper__dropdown-number ${
 								isSelected
 									? 'react-timekeeper__dropdown-number--active'

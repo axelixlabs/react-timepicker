@@ -1,5 +1,3 @@
-const isProd = process.env.NODE_ENV === 'production'
-
 const config = {
 	"presets": [
 		[
@@ -24,10 +22,6 @@ const config = {
 	"plugins": [
 		"@emotion/babel-plugin"
 	]
-}
-
-if (!isProd){
-	config.plugins.push('react-hot-loader/babel')
 }
 
 module.exports = config

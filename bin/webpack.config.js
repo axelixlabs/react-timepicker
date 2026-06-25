@@ -14,8 +14,6 @@ const config = {
 		extensions: ['.ts', '.tsx', '.js', '.jsx'],
 		alias: {
 			'@tk': resolve(global.appRoot, './src/index.ts'),
-			// https://github.com/hot-loader/react-dom#webpack
-			'react-dom': '@hot-loader/react-dom',
 		},
 	},
 

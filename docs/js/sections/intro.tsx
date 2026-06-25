@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react'
-import Timekeeper from '@tk'
+import Timekeeper, { TimeOutput } from '@tk'
 
 import { Github, Plug } from '../components/icons'
 import Link from '../components/link'
@@ -17,7 +17,7 @@ export default function Intro() {
 		return dateString
 	})
 
-	const updateTime = useCallback(t => {
+	const updateTime = useCallback((t: TimeOutput) => {
 		setTime(t.formatted12)
 	}, [])
 

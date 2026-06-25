@@ -1,4 +1,4 @@
-import { RenderResult } from '@testing-library/react'
+import { RenderResult, waitFor } from '@testing-library/react'
 import { renderTK, mockAnimations, clickOnPoint } from './helpers/dom'
 import {
 	HOUR_12_INNER,
@@ -8,7 +8,7 @@ import {
 	Coords,
 } from './helpers/coords'
 import { getClockHandLength, MODE } from '../../helpers/constants'
-import { Globals } from 'react-spring'
+import { Globals } from '@react-spring/core'
 
 jest.mock('lodash.debounce', () => ({
 	__esModule: true,
@@ -19,8 +19,6 @@ Globals.assign({
 	skipAnimation: true,
 })
 
-const flushPromises = () => new Promise(setImmediate)
-
 async function testHandLength(coords: Coords, expectedHandLength: number) {
 	const { wrapper } = renderTK({
 		time: { hour: 5, minute: 20 },
@@ -28,13 +26,9 @@ async function testHandLength(coords: Coords, expectedHandLength: number) {
 	})
 	clickOnPoint(wrapper, coords)
 
-	// double flush for HOUR_3_OUTER to resolve (need to investigate why)
-	await flushPromises()
-	await flushPromises()
-
-	// hand length should be correct
-	const handLength = getRenderedClockHandLength(wrapper)
-	expect(handLength).toEqual(expectedHandLength)
+	await waitFor(() => {
+		expect(getRenderedClockHandLength(wrapper)).toEqual(expectedHandLength)
+	})
 }
 
 function getRenderedClockHandLength(wrapper: RenderResult) {
@@ -46,7 +40,6 @@ function getRenderedClockHandLength(wrapper: RenderResult) {
 describe('ClockWrapper', () => {
 	beforeEach(() => {
 		mockAnimations()
-		jest.useFakeTimers()
 	})
 
 	describe('handles correct clock hand length during 24h mode', () => {

@@ -21,10 +21,16 @@ export function renderTK(override: TimekeeperProps = {}) {
 	}
 }
 
+function advanceTimersIfFaked() {
+	if (jest.isMockFunction(setTimeout)) {
+		jest.runAllTimers()
+	}
+}
+
 export function changeToMinutes(wrapper: RenderResult) {
 	fireEvent.click(wrapper.getByTestId('topbar_minute'))
 	act(() => {
-		jest.runAllTimers()
+		advanceTimersIfFaked()
 	})
 }
 
@@ -55,6 +61,6 @@ export function clickOnPoint(wrapper: RenderResult, coords: Coords) {
 	)
 
 	act(() => {
-		jest.runAllTimers()
+		advanceTimersIfFaked()
 	})
 }
